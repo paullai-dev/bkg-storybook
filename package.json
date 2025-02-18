@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --exit-zero-on-changes -d storybook-static/"
+    "chromatic": "chromatic --project-token=chpt_907b8edc9559e59 --auto-accept-changes"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
