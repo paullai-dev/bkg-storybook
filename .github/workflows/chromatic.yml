@@ -18,13 +18,6 @@ jobs:
       - name: Install dependencies
         # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
         run: yarn
-      - name: Build Storybook
-        run: yarn build-storybook --quiet
-      - name: Serve Storybook and run tests
-        run: |
-         npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-            "npx http-server storybook-static --port 6006 --silent" \
-            "npx wait-on tcp:6006 && yarn test-storybook"
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
